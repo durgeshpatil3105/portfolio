@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durgesh Patil | Data Analyst Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-chart-line"></i> DP
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#visualizations" class="nav-link">Visualizations</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#github" class="nav-link">GitHub</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <div class="home-text">
+                <h1 class="animate-slide-up">Durgesh Patil</h1>
+                <h2 class="animate-slide-up delay-1">Aspiring Data Analyst</h2>
+                <p class="animate-slide-up delay-2">"Turning data into meaningful insights."</p>
+                <div class="home-buttons animate-slide-up delay-3">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#" class="btn btn-secondary">Download Resume</a>
+                </div>
+            </div>
+            <div class="home-image animate-slide-up delay-4">
+                <div class="profile-card">
+                    <img src="assets/dp.jpg" alt="Durgesh Patil" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate Computer Engineering student from <strong>Savitribai Phule Pune University</strong> with a keen interest in <strong>Data Analysis, Data Visualization, and Business Insights</strong>.</p>
+                    <p>I love solving complex problems using data and creating actionable insights that drive business decisions. My toolkit includes Python, SQL, Power BI, and advanced statistical methods.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100+</h3>
+                            <p>Hours of Analysis</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Tools Mastered</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-skill="95">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-skill="90">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-skill="85">
+                    <i class="fas fa-file-excel"></i>
+                    <h3>Excel</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-skill="88">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Power BI</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-skill="92">
+                    <i class="fas fa-table"></i>
+                    <h3>Pandas</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-skill="90">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Statistics</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Visualizations Section -->
+    <section id="visualizations" class="visualizations">
+        <div class="container">
+            <h2 class="section-title">Data Visualizations</h2>
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3>Sales Analysis</h3>
+                    <canvas id="salesChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Monthly Trends</h3>
+                    <canvas id="trendChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Category Distribution</h3>
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Swiggy Data Analysis</h3>
+                        <p>Analyzed 50K+ orders to uncover delivery patterns, peak hours, and revenue trends.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Matplotlib</span>
+                        </div>
+                        <a href="project1.html" class="project-btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sales Performance Dashboard</h3>
+                        <p>Interactive Power BI dashboard showing sales trends and regional performance.</p>
+                        <div class="project-tech">
+                            <span>Power BI</span>
+                            <span>DAX</span>
+                            <span>SQL</span>
+                        </div>
+                        <a href="project2.html" class="project-btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Customer Segmentation</h3>
+                        <p>K-Means clustering to segment customers based on purchasing behavior.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                            <span>Seaborn</span>
+                        </div>
+                        <a href="project3.html" class="project-btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section id="github" class="github">
+        <div class="container">
+            <h2 class="section-title">Recent GitHub Projects</h2>
+            <div class="github-grid" id="githubProjects">
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    Loading GitHub projects...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+
+        <h2 class="section-title">Get In Touch</h2>
+
+        <div class="contact-content">
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:durgeshpatil99999@gmail.com">
+                        <h3>Email</h3>
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/durgesh-patil-38775824b" target="_blank">
+                        <h3>LinkedIn</h3>
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/durgeshpatil3105" target="_blank">
+                        <h3>GitHub</h3>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form">
+
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Durgesh Patil. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
